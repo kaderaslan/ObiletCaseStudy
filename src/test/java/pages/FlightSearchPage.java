@@ -67,8 +67,8 @@ public class FlightSearchPage {
 
 
     public void selectDates(int departureDaysFromToday, int returnDaysFromToday) {
-        selectDateFromCalendar(departureDaysFromToday, true); // Gidiş tarihi
-        selectDateFromCalendar(returnDaysFromToday, false);   // Dönüş tarihi
+        selectDateFromCalendar(departureDaysFromToday, true);
+        selectDateFromCalendar(returnDaysFromToday, false);
     }
 
     private void selectDateFromCalendar(int daysFromToday, boolean isDeparture) {
@@ -76,9 +76,9 @@ public class FlightSearchPage {
         String day = String.valueOf(targetDate.getDayOfMonth());
 
         if (isDeparture) {
-            wait.until(ExpectedConditions.elementToBeClickable(datePickerInput)).click(); // Gidiş takvimi açılır
+            wait.until(ExpectedConditions.elementToBeClickable(datePickerInput)).click();
         } else {
-            wait.until(ExpectedConditions.elementToBeClickable(returnDateInput)).click(); // Dönüş takvimi açılır
+            wait.until(ExpectedConditions.elementToBeClickable(returnDateInput)).click();
         }
 
         WebElement dayElement = wait.until(ExpectedConditions.elementToBeClickable(
