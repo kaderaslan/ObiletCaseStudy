@@ -34,7 +34,6 @@ public class RegistrationSteps {
 
     @When("Kullanıcı e-posta {string} ve şifre {string} girer")
     public void kullanici_eposta_ve_sifre_girer(String email, String password) {
-        // Eğer e-posta dinamik istenirse, aşağıdaki satırı kullan
         if (email.equalsIgnoreCase("random")) {
             email = "test_" + UUID.randomUUID().toString().substring(0, 8) + "@example.com";
         }

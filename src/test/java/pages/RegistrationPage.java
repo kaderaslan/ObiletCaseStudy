@@ -63,17 +63,9 @@ public class RegistrationPage {
         }
     }
 
-    public void clickRegisterButton() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-        WebElement registerBtn = wait.until(ExpectedConditions.elementToBeClickable(register));
-        waitForObservation();
-
-        registerBtn.click();
-    }
-
     public String getEmailErrorMessage() {
         try {
-            WebElement errorElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email-error")));
+            WebElement errorElement = wait.until(ExpectedConditions.visibilityOfElementLocated(emailErrorMessage));
             return errorElement.getText().trim();
         } catch (TimeoutException e) {
             System.out.println("Hata mesajı bulunamadı.");
