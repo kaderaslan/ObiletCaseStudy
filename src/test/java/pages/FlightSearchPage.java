@@ -28,10 +28,6 @@ public class FlightSearchPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
-    private By flightTab = By.xpath("//a[.//svg[@class='icon'] and contains(., 'Uçak')]");
-
-    private By fromInput = By.id("origin-input");
-    private By toInput = By.id("destination-input");
 
 
     private By datePickerInput = By.cssSelector("#departure .display");
