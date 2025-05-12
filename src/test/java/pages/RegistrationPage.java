@@ -33,7 +33,7 @@ public class RegistrationPage {
             emailElement.clear();
             emailElement.sendKeys(email);
         } catch (StaleElementReferenceException e) {
-            WebElement emailElement = driver.findElement(emailField); // yeniden bul
+            WebElement emailElement = driver.findElement(emailField);
             emailElement.clear();
             emailElement.sendKeys(email);
         } catch (Exception e) {
