@@ -14,11 +14,11 @@ public class PaymentPage {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     }
-    private By departureAirport = By.cssSelector(".flight-info-container .origin");
-    private By departureArrivalAirport = By.cssSelector(".flight-info-container .destination");
+    private By departureAirport = By.cssSelector("tr.direction-0 ~ tr td.origin");
+    private By departureArrivalAirport = By.cssSelector("tr.direction-0 ~ tr td.destination");
 
-    private By returnDepartureAirport = By.cssSelector(".flight-info-container .destination");
-    private By returnArrivalAirport = By.cssSelector(".flight-info-container .origin");
+    private By returnDepartureAirport = By.cssSelector("tr.direction-1 ~ tr td.origin");
+    private By returnArrivalAirport = By.cssSelector("tr.direction-1 ~ tr td.destination");
 
 
     public void verifySelectedFlights(String expectedDepartureOrigin, String expectedDepartureDestination,
